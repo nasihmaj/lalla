@@ -1,0 +1,97 @@
+/* ---------- COLOR PALETTE ---------- */
+:root{
+    --green:#10392c;
+    --green-light:#175b45;
+    --gold:#d4af37;
+    --pink:#ffe9f3;
+    --cream:#fffaf5;
+  }
+  
+  /* ---------- RESET ---------- */
+  *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+  body{
+    font-family:'Poppins',sans-serif;
+    background:var(--cream);
+    color:var(--green);
+  }
+  
+  /* ---------- HERO ---------- */
+  header{
+    min-height:100vh;
+    background:linear-gradient(135deg,var(--green) 0%,var(--green-light) 70%);
+    color:var(--gold);
+    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+    padding:40px 20px;position:relative;overflow:hidden;
+  }
+  header::before,header::after{
+    content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,.05);
+  }
+  header::before{width:500px;height:500px;top:-120px;right:-120px}
+  header::after{width:300px;height:300px;bottom:-100px;left:-80px}
+  .logo{max-width:280px;width:65%;height:auto}
+  .tagline{margin:20px 0;font-weight:300;letter-spacing:2px}
+  .btn{
+    display:inline-block;margin-top:10px;padding:14px 34px;
+    border:2px solid var(--gold);border-radius:30px;
+    color:var(--gold);text-decoration:none;font-weight:600;transition:.3s
+  }
+  .btn:hover{background:var(--gold);color:var(--green)}
+  .scroll-down{position:absolute;bottom:20px;font-size:1.8rem;color:var(--gold);animation:bounce 2s infinite}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  
+  /* ---------- NAV ---------- */
+  nav{position:sticky;top:0;z-index:999;background:rgba(16,57,44,.95);backdrop-filter:blur(4px);transition:.3s}
+  nav.shadow{box-shadow:0 2px 6px rgba(0,0,0,.15)}
+  nav ul{list-style:none;display:flex;justify-content:center}
+  nav li{margin:0 22px}
+  nav a{color:var(--cream);text-decoration:none;font-weight:600;padding:16px 0;display:inline-block;transition:.3s}
+  nav a:hover{color:var(--gold)}
+  
+  /* ---------- SECTIONS ---------- */
+  section{padding:70px 20px}
+  h3{
+    font-family:'Playfair Display',serif;
+    font-size:2rem;margin-bottom:1rem;text-align:center;color:var(--green);
+  }
+  .about p{max-width:700px;margin:auto;font-size:1.1rem;line-height:1.6}
+  
+  /* ---------- GALLERY ---------- */
+  .gallery{background:var(--pink)}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;margin-top:30px;
+  }
+  .grid img{
+    width:100%;height:260px;object-fit:cover;border-radius:18px;
+    box-shadow:0 6px 12px rgba(0,0,0,.12);transition:.35s;
+  }
+  .grid img:hover{transform:translateY(-6px) scale(1.03)}
+  
+  /* ---------- CONTACT ---------- */
+  .contact p{margin-top:6px}
+  .icons{margin-top:24px;font-size:2.4rem}
+  .icons a{color:var(--green);margin:0 14px;transition:.3s}
+  .icons a:hover{color:var(--gold)}
+
+  .contact {
+    text-align: center; /* ensure everything in contact is centered */
+  }
+  
+  .icons {
+    display: inline-flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 24px;
+    font-size: 2.4rem;
+  }
+  
+  /* ---------- FOOTER ---------- */
+  footer{text-align:center;padding:20px;background:#f1f1f1;font-size:.9rem;color:#666}
+  
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:500px){
+    nav li{margin:0 10px}
+    .grid img{height:200px}
+  }
+  
